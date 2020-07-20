@@ -24,8 +24,16 @@
 
       <hr />
 
+      {% if chart %}
+        <img src="{{ chart }}" />
+      {% endif %}
+
+      <hr />
+
       {% if data %}
-        {{ data|safe }}
+        <div class="table-responsive">
+          {{ data|safe }}
+        </div>
       {% else %}
         <p>No data available</p>
       {% endif %}
